@@ -1,6 +1,5 @@
 "use client"
 import React, { useState, useCallback } from "react"
-import useSound from "use-sound"
 import { motion, AnimatePresence } from "framer-motion"
 import { Beer } from "lucide-react"
 import { Card } from "@/components/Card"
@@ -18,7 +17,7 @@ function App() {
     const drawCard = useCallback(async () => {
         // playCardFlip()
         setIsGeneratingCard(true)
-        isFirstCard && setIsFirstCard(false)
+        if (isFirstCard) setIsFirstCard(false)
 
         const newCard = await fetch("/api/generate-card")
             .then((res) => res.json())
