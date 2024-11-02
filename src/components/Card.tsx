@@ -39,7 +39,7 @@ export function Card({ card, isRevealed }: CardProps) {
                 <p className="text-white/90 text-lg flex-grow">{card}</p>
 
                 <div className="text-white/75 text-sm mt-4 text-center">
-                    Toca para continuar
+                    Toca para continuar <br />
                 </div>
             </div>
         </div>
